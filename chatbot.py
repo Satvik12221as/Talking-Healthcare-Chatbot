@@ -72,7 +72,7 @@ def get_response(intents_list, intents_json):
 
 # This function will take the voice input converted
 # into string as input and predict and return the result in both
-# text as well as voice format.
+# text as well as voice format
 def calling_the_bot(txt):
     global res
     predict = predict_class(txt)
