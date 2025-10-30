@@ -1,0 +1,51 @@
+{
+  "intents": [
+    {
+      "tag": "Common Cold",
+      "patterns": [
+        "I have a runny nose and I'm sneezing",
+        "sore throat and coughing",
+        "I feel congested",
+        "runny nose, sneezing, sore throat"
+      ],
+      "responses": [
+        "You might be experiencing a Common Cold."
+      ]
+    },
+    {
+      "tag": "Headache",
+      "patterns": [
+        "my head hurts",
+        "I have a sharp pain in my head",
+        "it feels like a throbbing in my temples",
+        "constant head pain"
+      ],
+      "responses": [
+        "This sounds like a Headache."
+      ]
+    },
+    {
+      "tag": "Fever",
+      "patterns": [
+        "I feel very hot",
+        "my temperature is high",
+        "I'm shivering and feel hot",
+        "feeling feverish"
+      ],
+      "responses": [
+        "It seems you may have a Fever."
+      ]
+    },
+    {
+      "tag": "Allergy",
+      "patterns": [
+          "I have itchy eyes and a runny nose",
+          "sneezing a lot, itchy throat",
+          "watery eyes and skin rash"
+      ],
+      "responses": [
+          "These symptoms are often associated with Allergies."
+      ]
+    }
+  ]
+}
