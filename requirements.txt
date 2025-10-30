@@ -1,0 +1,8 @@
+tensorflow
+nltk
+numpy
+Flask
+Werkzeug
+gunicorn
+pickle-mixin
+jsonify

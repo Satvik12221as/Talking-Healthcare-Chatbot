@@ -1,0 +1,33 @@
+# Virtual environments
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/project files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large data or binaries
+*.dll
+*.exe
+*.zip
+*.tar
+*.gz
+*.h5
+*.pkl
+*.model
+*.bin
+
+# OS files
+.DS_Store
+Thumbs.db
