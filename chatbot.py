@@ -4,7 +4,8 @@ import pickle
 
 import nltk
 from nltk.stem import WordNetLemmatizer
-from tensorflow.keras.models import load_model
+from tensorflow import keras
+from keras.models import load_model
 
 import numpy as np
 import speech_recognition as sr
@@ -14,9 +15,9 @@ import time
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
 
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbot_model.h5')
+words = pickle.load(open('trained_model/words.pkl', 'rb'))
+classes = pickle.load(open('trained_model/classes.pkl', 'rb'))
+model = load_model('trained_model/chatbot_model.h5')
 
 
 def clean_up_sentence(sentence):

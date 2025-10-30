@@ -6,3 +6,7 @@ Werkzeug
 gunicorn
 pickle-mixin
 jsonify
+SpeechRecognition
+pyttsx3
+keras
+PyAudio
