@@ -80,7 +80,7 @@ if prompt := st.chat_input("How are you feeling today?"):
         st.markdown(prompt)
 
     # Get bot response
-    with st.spinner('Thinking...'):
+    with st.spinner('Thinking....'):
         ints = predict_class(prompt)
         res = get_response(ints, intents)
 
