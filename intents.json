@@ -1,51 +1,455 @@
 {
   "intents": [
     {
-      "tag": "Common Cold",
-      "patterns": [
-        "I have a runny nose and I'm sneezing",
-        "sore throat and coughing",
-        "I feel congested",
-        "runny nose, sneezing, sore throat"
-      ],
-      "responses": [
-        "You might be experiencing a Common Cold."
-      ]
+      "tag": "Greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon", "Is anyone there?", "What's up?", "Yo", "Greetings"],
+      "responses": ["Hello! Please describe the symptoms you are experiencing.", "Hi there. I'm here to help. What are your health concerns?", "Greetings. Tell me about your symptoms."]
     },
     {
-      "tag": "Headache",
-      "patterns": [
-        "my head hurts",
-        "I have a sharp pain in my head",
-        "it feels like a throbbing in my temples",
-        "constant head pain"
-      ],
-      "responses": [
-        "This sounds like a Headache."
-      ]
+      "tag": "Goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later", "I have to go", "Exit", "That's all for now", "Quit", "I'm done"],
+      "responses": ["Goodbye! I hope you feel better soon. Take care.", "Farewell. Remember to consult a professional if your symptoms persist.", "Bye! Stay safe and healthy."]
     },
     {
-      "tag": "Fever",
-      "patterns": [
-        "I feel very hot",
-        "my temperature is high",
-        "I'm shivering and feel hot",
-        "feeling feverish"
-      ],
-      "responses": [
-        "It seems you may have a Fever."
-      ]
+      "tag": "Thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot", "I appreciate it", "Thank you so much"],
+      "responses": ["You're welcome. Is there anything else I can assist with?", "You're welcome. Please remember this is not a substitute for professional medical advice.", "Glad I could help. Take care."]
+    },
+    {
+      "tag": "Disclaimer",
+      "patterns": ["Are you a doctor?", "Can you diagnose me?", "Is this a medical diagnosis?", "Who are you?", "Is this advice real?", "Should I trust you?"],
+      "responses": ["I am an AI assistant, not a medical professional. The information I provide is for educational purposes only. Please consult a qualified healthcare provider for any medical diagnosis or concerns.", "It's crucial to understand that I am not a doctor. For a proper diagnosis and treatment plan, you must see a healthcare professional."]
+    },
+    {
+      "tag": "Nonsense",
+      "patterns": ["asdfghjkl", "what is the time?", "tell me a joke", "what is the meaning of life?", "who is the president?", "sing a song"],
+      "responses": ["I'm sorry, I can only process information about health symptoms. Can you please describe what you are feeling?", "My purpose is to help with health concerns. I can't answer that question.", "Please tell me about your symptoms so I can try to help."]
+    },
+    {
+      "tag": "Sympathy",
+      "patterns": ["I feel awful", "I'm in a lot of pain", "This is scary", "I'm worried about my health", "I feel terrible"],
+      "responses": ["I'm sorry to hear that. It's understandable to feel that way. Let's see if we can identify what might be happening.", "That sounds very difficult. Please describe your symptoms in more detail.", "I understand this must be worrying for you. I'm here to listen."]
+    },
+    {
+      "tag": "Capabilities",
+      "patterns": ["What can you do?", "How do you work?", "What are your capabilities?", "What is your purpose?"],
+      "responses": ["I can listen to your symptoms and suggest possible related health conditions based on patterns in my data. This is not a medical diagnosis.", "You can describe your symptoms to me, and I will try to identify potential conditions. This information is for educational purposes only."]
+    },
+    {
+      "tag": "Confirmation",
+      "patterns": ["Yes", "Correct", "That's right", "Yeah", "Yup"],
+      "responses": ["Thank you for confirming. Is there anything else?", "Okay, understood.", "Got it. What else are you experiencing?"]
+    },
+    {
+      "tag": "Correction",
+      "patterns": ["No", "That's not right", "Incorrect", "Nope"],
+      "responses": ["My apologies. Please describe your symptoms again more clearly.", "I see. Let's try again. What are you experiencing?", "Okay, let me re-evaluate. Please restate your symptoms."]
+    },
+    {
+      "tag": "Anger",
+      "patterns": ["You are useless", "This is not helping", "You are stupid", "I am frustrated"],
+      "responses": ["I apologize if my responses are not helpful. I am still learning. I strongly recommend consulting a human doctor for accurate advice.", "I understand your frustration. It might be best to speak with a healthcare professional directly.", "I am sorry I could not provide the help you need. Please seek professional medical advice."]
+    },
+    {
+      "tag": "Common_Cold",
+      "patterns": ["I have a runny nose and sneezing", "My throat is scratchy and I have a cough", "I feel congested", "stuffy nose and a mild cough", "My nose won't stop running", "Achoo!", "I think I'm getting a cold"],
+      "responses": ["These symptoms are often associated with the Common Cold. It's important to get plenty of rest and stay hydrated.", "This sounds like a Common Cold. Consider resting and drinking warm fluids."]
+    },
+    {
+      "tag": "Flu",
+      "patterns": ["High fever, body aches, and a headache", "Feeling very tired and weak with a dry cough", "Chills and sweats, sore throat, and muscle pains", "My whole body hurts and I'm running a temperature", "Extreme fatigue and fever"],
+      "responses": ["The combination of high fever, body aches, and fatigue could indicate Influenza (Flu). It's highly recommended to see a doctor.", "These are characteristic symptoms of the Flu. Please consult a healthcare provider for proper care."]
+    },
+    {
+      "tag": "COVID_19",
+      "patterns": ["I have a fever, cough, and I've lost my sense of smell", "Loss of taste or smell", "Shortness of breath and a persistent cough", "Fever and I can't taste my food"],
+      "responses": ["Loss of taste or smell combined with fever and cough are significant symptoms. Please get tested for COVID-19 and consult a doctor immediately.", "These symptoms are strongly associated with COVID-19. It is critical that you isolate and seek medical guidance."]
     },
     {
       "tag": "Allergy",
-      "patterns": [
-          "I have itchy eyes and a runny nose",
-          "sneezing a lot, itchy throat",
-          "watery eyes and skin rash"
-      ],
-      "responses": [
-          "These symptoms are often associated with Allergies."
-      ]
+      "patterns": ["My eyes are itchy and watery", "I can't stop sneezing and my nose is runny", "I have a skin rash and hives", "watery eyes and an itchy throat", "Itchy nose and constant sneezing fits", "My allergies are acting up"],
+      "responses": ["Itchy eyes, sneezing, and a runny nose are common signs of Allergies. An allergist can help you identify specific triggers.", "These symptoms are often linked to an allergic reaction. You should see a doctor to determine the cause."]
+    },
+    {
+      "tag": "Stomach_Bug",
+      "patterns": ["I feel nauseous and have been vomiting", "I have diarrhea and stomach cramps", "My stomach hurts and I feel queasy", "vomiting, diarrhea, stomach pain", "I can't keep any food or water down"],
+      "responses": ["Nausea, vomiting, and diarrhea are key symptoms of Gastroenteritis (stomach bug). It is critical to stay hydrated by sipping clear fluids.", "These symptoms suggest a stomach bug. Dehydration is a risk, so please see a doctor if it doesn't improve."]
+    },
+    {
+      "tag": "Migraine",
+      "patterns": ["Severe, throbbing headache on one side", "I'm sensitive to light and sound, and feel nauseous", "I see flashing lights and my head is pounding", "intense headache with light sensitivity", "This headache makes me feel sick"],
+      "responses": ["A severe, throbbing headache with sensitivity to light and sound is characteristic of a Migraine. Rest in a quiet, dark room and consult a doctor for treatment options.", "These are strong indicators of a Migraine. A healthcare provider can offer specific medications."]
+    },
+    {
+      "tag": "Acid_Reflux",
+      "patterns": ["Burning sensation in my chest after eating", "I get heartburn frequently", "There's a sour, acidic taste in my mouth", "Chest pain that gets worse when I lie down", "Indigestion and a feeling of fullness"],
+      "responses": ["A burning sensation in the chest, or heartburn, is a classic sign of Acid Reflux (GERD). A doctor can help you manage these symptoms.", "These symptoms are consistent with Acid Reflux. A healthcare provider can offer a proper evaluation and treatment plan."]
+    },
+    {
+      "tag": "UTI",
+      "patterns": ["It burns when I urinate", "I feel a constant urge to pee, but little comes out", "My urine is cloudy and has a strong, foul smell", "Pain in my lower abdomen or pelvis", "Painful urination"],
+      "responses": ["Painful, frequent urination is a common symptom of a Urinary Tract Infection (UTI). It is important to see a doctor promptly, as UTIs require antibiotic treatment.", "These symptoms strongly suggest a UTI. Please contact a healthcare provider for a diagnosis and prescription."]
+    },
+    {
+      "tag": "Anxiety",
+      "patterns": ["I feel constantly worried and on edge", "My heart is racing and I feel breathless", "I have a sense of impending doom", "I feel nervous and can't stop worrying", "I'm having panic attacks"],
+      "responses": ["Constant worry, a racing heart, and feelings of dread are signs of anxiety. It is very important to speak with a mental health professional.", "These feelings can be overwhelming. Talking to a therapist can provide you with effective strategies to manage anxiety."]
+    },
+    {
+      "tag": "Depression",
+      "patterns": ["I feel sad and hopeless most of the time", "I've lost interest in activities I used to enjoy", "I'm always tired and have no energy", "I have trouble sleeping or I sleep too much", "I feel worthless and empty"],
+      "responses": ["Persistent feelings of sadness, hopelessness, and loss of interest are signs of Depression. It is a treatable medical condition, and speaking with a mental health professional is a crucial first step.", "It's brave to talk about these feelings. A therapist or counselor can provide support and treatment options. Please reach out for professional help."]
+    },
+    {
+      "tag": "Asthma",
+      "patterns": ["I'm wheezing and short of breath", "I have a tight feeling in my chest", "I cough a lot, especially at night", "I get breathless after light exercise", "I can't take a deep breath"],
+      "responses": ["Wheezing, shortness of breath, and chest tightness are hallmark signs of Asthma. It is very important to see a doctor for a proper diagnosis and an inhaler if needed.", "These symptoms require medical attention. An asthma action plan from a doctor can help you manage your condition effectively."]
+    },
+    {
+      "tag": "Eczema",
+      "patterns": ["I have dry, itchy, and inflamed skin", "There are red, scaly patches on my skin", "My skin is very sensitive and gets irritated easily", "Itchy rash on my arms and behind my knees", "My skin is cracking and dry"],
+      "responses": ["Dry, itchy, and inflamed patches of skin are common symptoms of Eczema (Atopic Dermatitis). A dermatologist can provide medicated creams to help manage flare-ups.", "This sounds like it could be Eczema. A doctor can help you identify triggers and recommend appropriate moisturizers and treatments."]
+    },
+    {
+      "tag": "Arthritis",
+      "patterns": ["My joints are stiff and painful, especially in the morning", "I have swollen joints in my hands and knees", "It's difficult to move my fingers and they ache", "Joint pain that gets worse with activity", "My joints feel warm to the touch"],
+      "responses": ["Joint pain, stiffness, and swelling are classic symptoms of Arthritis. It is important to see a doctor to determine the type of arthritis and start a management plan.", "These symptoms are consistent with Arthritis. A rheumatologist can provide a diagnosis and treatment to manage pain and prevent joint damage."]
+    },
+    {
+      "tag": "Acne",
+      "patterns": ["I have pimples on my face", "My skin is breaking out with blackheads and whiteheads", "I have painful cysts under my skin", "Oily skin and many zits"],
+      "responses": ["Breakouts with pimples, blackheads, and cysts are signs of Acne. A dermatologist can recommend effective treatments.", "Acne is a common skin condition. For persistent cases, a doctor's advice can be very helpful."]
+    },
+    {
+      "tag": "Anemia",
+      "patterns": ["I feel very weak and tired all the time", "I get dizzy and lightheaded easily", "My skin is pale and I feel short of breath", "I have cold hands and feet"],
+      "responses": ["Fatigue, dizziness, and pale skin can be symptoms of Anemia (low iron). A blood test from a doctor is needed to confirm this.", "These symptoms could indicate Anemia. Please see a healthcare provider for a diagnosis."]
+    },
+    {
+      "tag": "Appendicitis_Warning",
+      "patterns": ["I have a sharp pain in my lower right abdomen", "The pain started near my belly button and moved to the right", "I have a fever, nausea, and severe abdominal pain"],
+      "responses": ["Severe pain in the lower right abdomen could be a sign of Appendicitis, which is a medical emergency. Please go to the nearest emergency room immediately.", "These symptoms are very serious and could indicate Appendicitis. You must seek immediate medical attention."]
+    },
+    {
+      "tag": "Back_Pain",
+      "patterns": ["I have a sharp pain in my lower back", "My back has a dull, constant ache", "It hurts to bend over or lift things", "Muscle spasm in my back"],
+      "responses": ["Back pain can be caused by many things, from muscle strain to more serious issues. If the pain is severe or persistent, please see a doctor or a physical therapist.", "For back pain that doesn't improve with rest, a professional medical evaluation is recommended."]
+    },
+    {
+      "tag": "Bronchitis",
+      "patterns": ["I have a persistent cough that produces mucus", "There's a rattling sound in my chest when I breathe", "I feel a tightness in my chest and have a slight fever"],
+      "responses": ["A persistent cough with mucus and chest congestion can be a sign of Bronchitis. A doctor can determine if it's viral or bacterial.", "These symptoms are common in Bronchitis. Please consult a healthcare provider for an evaluation."]
+    },
+    {
+      "tag": "Burn_Minor",
+      "patterns": ["I touched something hot and my skin is red", "I have a small, painful burn with no blisters", "My skin is red and tender after a minor burn"],
+      "responses": ["For a minor burn, run cool water over the area for several minutes. Do not use ice. If it blisters or is severe, seek medical attention.", "Cool the burn with running water. You can apply aloe vera gel. See a doctor for any large or deep burns."]
+    },
+    {
+      "tag": "Canker_Sore",
+      "patterns": ["I have a painful, small white sore inside my mouth", "There's a sore on my inner lip that stings", "It hurts to eat because of a sore in my mouth"],
+      "responses": ["Painful sores inside the mouth are often Canker Sores. They usually heal on their own in a week or two. A doctor or dentist can provide topical treatments if they are severe.", "This sounds like a Canker Sore. While painful, they are typically harmless. See a dentist if it persists."]
+    },
+    {
+      "tag": "Carpal_Tunnel",
+      "patterns": ["I have numbness and tingling in my hand and fingers", "My wrist hurts, especially at night", "I have a weak grip and drop things easily"],
+      "responses": ["Numbness, tingling, and pain in the wrist and hand are classic symptoms of Carpal Tunnel Syndrome. A doctor can recommend treatments like wrist splints or physical therapy.", "These symptoms suggest Carpal Tunnel. A medical evaluation is needed for a proper diagnosis."]
+    },
+    {
+      "tag": "Chest_Pain_Warning",
+      "patterns": ["I have a crushing pain in the center of my chest", "The pain is spreading to my arm, jaw, and back", "I have chest tightness, shortness of breath, and feel lightheaded"],
+      "responses": ["Chest pain, especially with pain spreading to the arm or jaw, can be a sign of a heart attack. This is a medical emergency. Please call for emergency medical services immediately.", "These are very serious symptoms. You must call for an ambulance or go to the emergency room right away."]
+    },
+    {
+      "tag": "Chickenpox",
+      "patterns": ["I have an itchy rash with fluid-filled blisters all over my body", "I have a fever and small, red spots that are turning into blisters", "Itchy blistery rash"],
+      "responses": ["An itchy, blister-like rash is the hallmark of Chickenpox. It is very contagious. Please consult a doctor for advice on managing symptoms.", "This sounds like Chickenpox. It's important to see a healthcare provider and avoid contact with others."]
+    },
+    {
+      "tag": "Concussion_Symptoms",
+      "patterns": ["I hit my head and now I have a headache and feel confused", "I'm dizzy, nauseous, and sensitive to light after a head injury", "I feel foggy and can't remember what happened"],
+      "responses": ["Confusion, headache, and dizziness after a head injury are signs of a Concussion. It is very important to be evaluated by a doctor immediately.", "Any head injury followed by these symptoms requires immediate medical attention to rule out serious complications."]
+    },
+    {
+      "tag": "Constipation",
+      "patterns": ["I'm having trouble passing stools", "I haven't had a bowel movement in several days", "My stools are hard and difficult to pass"],
+      "responses": ["Difficulty with bowel movements is known as Constipation. Increasing fiber and water intake can help. If it's a persistent problem, consult a doctor.", "This sounds like Constipation. Try adding more fruits, vegetables, and water to your diet. See a provider if it continues."]
+    },
+    {
+      "tag": "Cut_Minor",
+      "patterns": ["I cut my finger and it's bleeding slightly", "I have a small, clean cut on my arm", "I got a paper cut"],
+      "responses": ["For a minor cut, wash the area with soap and water, apply an antiseptic, and cover it with a bandage. If the bleeding is heavy or the cut is deep, seek medical attention.", "Clean the cut thoroughly and apply a bandage. See a doctor if it shows signs of infection like redness or pus."]
+    },
+
+    {
+      "tag": "Dehydration",
+      "patterns": ["I feel very thirsty and my mouth is dry", "My urine is dark yellow and I feel dizzy", "I have a headache and feel very fatigued", "I haven't been drinking enough water"],
+      "responses": ["Dry mouth, dark urine, and dizziness are signs of Dehydration. It is crucial to drink water or electrolyte beverages immediately.", "These symptoms suggest you may be dehydrated. Please start rehydrating with small, frequent sips of water."]
+    },
+    {
+      "tag": "Diabetes_Symptoms",
+      "patterns": ["I'm always thirsty and urinating frequently", "I'm losing weight without trying and I'm always hungry", "I have blurry vision and feel very tired"],
+      "responses": ["Excessive thirst, frequent urination, and unexplained weight loss can be symptoms of Diabetes. It is very important to see a doctor for testing.", "These symptoms require a medical evaluation for Diabetes. Please schedule an appointment with your healthcare provider."]
+    },
+    {
+      "tag": "Diarrhea",
+      "patterns": ["I have loose, watery stools", "I've had multiple bowel movements today", "My stomach is upset and I have watery diarrhea"],
+      "responses": ["Loose, watery stools are known as Diarrhea. It's important to stay hydrated by drinking plenty of clear fluids. See a doctor if it lasts more than a couple of days.", "This sounds like Diarrhea. Focus on fluid intake to prevent dehydration. Consult a provider if it's severe or persistent."]
+    },
+    {
+      "tag": "Dizziness",
+      "patterns": ["I feel lightheaded and unsteady", "The room feels like it's spinning", "I feel like I might faint"],
+      "responses": ["Dizziness can have many causes. It's important to sit or lie down to avoid falling. If it is severe or persistent, you should see a doctor.", "Feeling dizzy or lightheaded warrants a medical check-up to determine the underlying cause."]
+    },
+    {
+      "tag": "Dry_Eyes",
+      "patterns": ["My eyes feel gritty and scratchy", "My eyes are red and have a burning sensation", "It feels like there's sand in my eyes"],
+      "responses": ["A gritty, burning sensation can be a sign of Dry Eyes. Over-the-counter lubricating eye drops can provide relief. If it persists, see an eye doctor.", "This sounds like Dry Eye Syndrome. Artificial tears can help. An optometrist can provide a full evaluation."]
+    },
+    {
+      "tag": "Ear_Infection",
+      "patterns": ["I have a sharp, throbbing pain in my ear", "My ear feels full and my hearing is muffled", "There is fluid draining from my ear"],
+      "responses": ["Ear pain with muffled hearing could be an Ear Infection. It's important to see a doctor, as you may need antibiotics.", "These symptoms are common in an Ear Infection. A healthcare provider needs to examine your ear to provide proper treatment."]
+    },
+    {
+      "tag": "Fatigue",
+      "patterns": ["I feel tired all the time, no matter how much I sleep", "I have no energy or motivation", "I'm constantly exhausted"],
+      "responses": ["Persistent, overwhelming fatigue can be a symptom of many underlying conditions. It is important to discuss this with your doctor.", "Constant exhaustion that isn't relieved by rest should be evaluated by a healthcare professional."]
+    },
+    {
+      "tag": "Fever",
+      "patterns": ["My temperature is high", "I feel feverish and have the chills", "I'm hot and sweating"],
+      "responses": ["A high temperature is a Fever, which is your body's response to an infection. Rest and fluids are important. Consult a doctor if it's very high or persists.", "This sounds like a Fever. You can manage it with rest. See a provider if it doesn't improve."]
+    },
+    {
+      "tag": "Food_Poisoning",
+      "patterns": ["I started vomiting and having diarrhea a few hours after eating", "I have severe stomach cramps, nausea, and a fever after a meal", "I think the food I ate was bad"],
+      "responses": ["Sudden onset of vomiting, diarrhea, and cramps after eating are classic signs of Food Poisoning. The most important thing is to stay hydrated. See a doctor if symptoms are severe or don't improve.", "This sounds like Food Poisoning. Focus on drinking clear fluids. Medical attention is needed for severe cases."]
+    },
+    {
+      "tag": "Fungal_Infection_Skin",
+      "patterns": ["I have a red, itchy, circular rash", "The skin between my toes is itchy and peeling", "I have athlete's foot or ringworm"],
+      "responses": ["A red, itchy, ring-shaped rash is often a Fungal Infection like ringworm. Over-the-counter antifungal creams can be effective. A doctor can confirm the diagnosis.", "This sounds like a fungal skin infection. A healthcare provider or pharmacist can recommend an appropriate antifungal treatment."]
+    },
+    {
+      "tag": "Gallstones",
+      "patterns": ["I have a sudden, intense pain in my upper right abdomen", "The pain is severe after eating a fatty meal", "I have nausea and pain between my shoulder blades"],
+      "responses": ["Sudden, severe pain in the upper right abdomen, especially after fatty meals, can be a sign of Gallstones. This requires a medical evaluation.", "These symptoms could be caused by Gallstones. It is important to see a doctor for a diagnosis."]
+    },
+    {
+      "tag": "Gastritis",
+      "patterns": ["I have a gnawing or burning ache in my upper abdomen", "I feel bloated and nauseous", "The pain gets better or worse after eating"],
+      "responses": ["A burning ache in the upper abdomen can be a sign of Gastritis (stomach lining inflammation). A doctor can help determine the cause and recommend treatment.", "These symptoms are consistent with Gastritis. Please see a healthcare provider for an evaluation."]
+    },
+    {
+      "tag": "GERD",
+      "patterns": ["I have heartburn almost every day", "I often regurgitate food or sour liquid", "I have a chronic cough and a sore throat in the morning"],
+      "responses": ["Frequent heartburn and regurgitation are hallmark symptoms of GERD (Gastroesophageal Reflux Disease). A doctor can provide a treatment plan to manage this chronic condition.", "This sounds like GERD. It's a manageable condition, and a healthcare provider can help you control the symptoms."]
+    },
+    {
+      "tag": "Gout",
+      "patterns": ["I have sudden, severe pain and swelling in my big toe", "My joint is red, hot, and extremely tender", "It hurts so much I can't even stand a sheet on it"],
+      "responses": ["Sudden, intense joint pain, especially in the big toe, is a classic sign of a Gout attack. It is very important to see a doctor for medication to treat the inflammation.", "These symptoms are highly indicative of Gout. A healthcare provider can provide treatment to relieve the pain and prevent future attacks."]
+    },
+    {
+      "tag": "Headache_Tension",
+      "patterns": ["I have a dull, aching pain all over my head", "It feels like a tight band is wrapped around my head", "My neck and shoulders feel tight and sore"],
+      "responses": ["A dull, aching pain that feels like a tight band is characteristic of a Tension Headache. Over-the-counter pain relievers, rest, and stress reduction can help.", "This sounds like a Tension Headache. If they are frequent or severe, a doctor can help identify triggers."]
+    },
+    {
+      "tag": "Heart_Palpitations",
+      "patterns": ["It feels like my heart is skipping a beat", "My heart is fluttering or racing in my chest", "I can feel my heartbeat pounding"],
+      "responses": ["Heart Palpitations can feel scary, but are often harmless. However, if they are accompanied by dizziness, chest pain, or shortness of breath, you should see a doctor immediately.", "Feeling your heart race or skip a beat should be mentioned to your doctor to rule out any underlying issues."]
+    },
+    {
+      "tag": "Hemorrhoids",
+      "patterns": ["I have itching and pain around my anus", "There's bright red blood on the toilet paper after a bowel movement", "I feel a painful lump near my anus"],
+      "responses": ["Itching, pain, and bleeding during bowel movements can be signs of Hemorrhoids. A doctor can recommend treatments and lifestyle changes.", "These are common symptoms of Hemorrhoids. A healthcare provider can confirm the diagnosis and offer relief."]
+    },
+    {
+      "tag": "High_Blood_Pressure_Symptoms",
+      "patterns": ["I don't feel any symptoms but my blood pressure reading was high", "I have frequent headaches, dizziness, and nosebleeds", "I have shortness of breath and vision problems"],
+      "responses": ["High Blood Pressure often has no symptoms, which is why it's called the 'silent killer'. It is crucial to have it managed by a doctor to prevent serious health problems.", "While often asymptomatic, headaches or dizziness can sometimes occur with very High Blood Pressure. You must see a doctor to manage it."]
+    },
+    {
+      "tag": "Hives",
+      "patterns": ["I have raised, itchy, red welts on my skin", "The welts appear and disappear in different spots", "I have an itchy rash that looks like mosquito bites"],
+      "responses": ["Itchy, raised welts are known as Hives, which are often caused by an allergic reaction. An antihistamine can help. If you have trouble breathing, seek emergency medical help immediately.", "This sounds like Hives. If accompanied by swelling of the lips or tongue, it is an emergency."]
+    },
+    {
+      "tag": "IBS",
+      "patterns": ["I have chronic abdominal pain with bloating, gas, and diarrhea or constipation", "My bowel habits are always changing", "My stomach hurts and I have a mix of constipation and diarrhea"],
+      "responses": ["Chronic abdominal pain with altered bowel habits are key signs of Irritable Bowel Syndrome (IBS). A doctor can help you manage this long-term condition.", "These symptoms are consistent with IBS. A gastroenterologist can provide a diagnosis and management plan."]
+    },
+    {
+      "tag": "Insomnia",
+      "patterns": ["I can't fall asleep at night", "I wake up multiple times and can't get back to sleep", "I feel tired all day because I don't sleep well", "difficulty sleeping", "I lay awake for hours"],
+      "responses": ["Difficulty falling or staying asleep is known as Insomnia. Establishing a regular sleep routine can help, but a doctor can also provide guidance.", "Persistent trouble with sleep can be very draining. A healthcare provider can help investigate the cause and suggest solutions."]
+    },
+    {
+      "tag": "Insect_Bite",
+      "patterns": ["I was bitten by a mosquito and it's itchy", "I have a red, swollen bump from an insect bite", "A bee stung me and it hurts"],
+      "responses": ["For a typical insect bite, wash the area and apply a cold compress or hydrocortisone cream to reduce itching. If you have signs of a severe allergic reaction, like difficulty breathing, seek emergency help.", "Most insect bites are minor. Watch for signs of infection or a severe allergic reaction."]
+    },
+    {
+      "tag": "Kidney_Stone",
+      "patterns": ["I have severe, sharp pain in my side and back, below the ribs", "The pain comes in waves and is excruciating", "I have pain when urinating and my urine is pink or brown"],
+      "responses": ["Severe, wave-like pain in the back and side is a classic symptom of a Kidney Stone. This is extremely painful and requires a doctor's evaluation.", "These symptoms are highly suggestive of a Kidney Stone. You should seek medical attention for pain management and diagnosis."]
+    },
+    {
+      "tag": "Laryngitis",
+      "patterns": ["I've lost my voice", "My voice is very hoarse and raspy", "It hurts to talk and my throat is dry"],
+      "responses": ["Losing your voice or hoarseness is known as Laryngitis. Resting your voice and drinking fluids are the best treatments. See a doctor if it persists for more than two weeks.", "This sounds like Laryngitis. The most important thing you can do is rest your voice completely."]
+    },
+    {
+      "tag": "Low_Blood_Pressure_Symptoms",
+      "patterns": ["I feel dizzy and lightheaded when I stand up", "I have blurry vision and feel like I'm going to faint", "I feel weak and fatigued"],
+      "responses": ["Dizziness upon standing can be a sign of Low Blood Pressure (Hypotension). It's important to discuss this with a doctor to find the cause.", "These symptoms could be due to Low Blood Pressure. A healthcare provider can investigate why it's happening."]
+    },
+    {
+      "tag": "Menstrual_Cramps",
+      "patterns": ["I have throbbing pain in my lower abdomen during my period", "I have cramps and a dull backache", "Painful period cramps"],
+      "responses": ["Painful cramps are a common part of menstruation. Over-the-counter pain relievers and a heating pad can help. If the pain is severe, a gynecologist can offer other options.", "This sounds like menstrual cramps. If they are debilitating, please see a doctor."]
+    },
+    {
+      "tag": "Mono",
+      "patterns": ["I have extreme fatigue, a sore throat, and swollen lymph nodes in my neck", "I have a fever and feel completely drained of energy", "My tonsils are swollen and I have a headache"],
+      "responses": ["Extreme fatigue with a severe sore throat and swollen glands are classic symptoms of Mononucleosis (Mono). A doctor can confirm the diagnosis with a blood test.", "These symptoms strongly suggest Mono. It's important to get a diagnosis from a provider and get plenty of rest."]
+    },
+    {
+      "tag": "Muscle_Strain",
+      "patterns": ["I pulled a muscle while exercising", "I have a sore and tender muscle", "It hurts to move a specific muscle"],
+      "responses": ["This sounds like a Muscle Strain. The RICE method (Rest, Ice, Compression, Elevation) is the recommended first aid. See a doctor if the pain is severe or you can't move the limb.", "For a pulled muscle, rest and ice are key. A provider can offer more advice if it doesn't improve."]
+    },
+    {
+      "tag": "Nausea",
+      "patterns": ["I feel like I'm going to throw up", "My stomach feels uneasy and queasy", "I feel sick to my stomach"],
+      "responses": ["Nausea is the feeling of needing to vomit. Sipping clear fluids and eating bland foods like crackers can help. If it's persistent, see a doctor.", "Feeling nauseous is unpleasant. Try to rest and stay hydrated. A healthcare provider can help if it continues."]
+    },
+    {
+      "tag": "Panic_Attack",
+      "patterns": ["I had a sudden rush of intense fear", "My heart was pounding, I couldn't breathe, and I thought I was dying", "I feel a sudden sense of terror and doom"],
+      "responses": ["A sudden episode of intense fear with physical symptoms like a racing heart and shortness of breath sounds like a Panic Attack. It's very frightening but not life-threatening. Speaking with a mental health professional is very important.", "That sounds like a Panic Attack. They can be terrifying. A therapist can teach you coping strategies."]
+    },
+    {
+      "tag": "Peptic_Ulcer",
+      "patterns": ["I have a burning stomach pain, especially between meals or at night", "The pain feels better after I eat", "I have bloating, burping, and feel full easily"],
+      "responses": ["A burning stomach pain that improves with eating can be a sign of a Peptic Ulcer. It is important to see a doctor for diagnosis and treatment.", "These symptoms could indicate a stomach ulcer. A gastroenterologist can perform tests to confirm this."]
+    },
+    {
+      "tag": "Pink_Eye",
+      "patterns": ["My eye is red and itchy", "There is a gritty feeling in my eye", "My eye has a watery or thick yellow discharge", "redness, itching, and discharge from eye", "My eyelids are stuck together in the morning"],
+      "responses": ["Redness, itching, and discharge are common symptoms of Conjunctivitis (Pink Eye). It can be contagious, so it is important to see a doctor for treatment.", "This sounds like it could be Pink Eye. You should consult a healthcare professional for diagnosis and treatment."]
+    },
+    {
+      "tag": "Plantar_Fasciitis",
+      "patterns": ["I have a stabbing pain in the bottom of my heel", "The pain is worst with my first steps in the morning", "My heel hurts after standing for a long time"],
+      "responses": ["Sharp heel pain, especially in the morning, is a classic symptom of Plantar Fasciitis. A doctor or podiatrist can recommend stretching exercises and proper footwear.", "This sounds like Plantar Fasciitis. A specialist can provide a treatment plan to relieve the pain."]
+    },
+    {
+      "tag": "Pneumonia",
+      "patterns": ["I have a cough with greenish or yellow mucus, a high fever, and chills", "I feel very short of breath and have a sharp pain in my chest when I breathe deeply", "I'm weak, sweating, and have a bad cough"],
+      "responses": ["A cough with colored mucus, high fever, and shortness of breath are serious symptoms that could be Pneumonia. You must see a doctor immediately.", "These are signs of a severe lung infection like Pneumonia. Please seek prompt medical attention."]
+    },
+    {
+      "tag": "Psoriasis",
+      "patterns": ["I have thick, red, scaly patches on my skin", "The patches are silvery-white and sometimes itchy or sore", "I have this rash on my elbows, knees, and scalp"],
+      "responses": ["Thick, red, scaly patches are a hallmark of Psoriasis. It is a chronic autoimmune condition that should be managed by a dermatologist.", "This sounds like Psoriasis. A dermatologist can provide treatments to control the flare-ups."]
+    },
+    {
+      "tag": "Rosacea",
+      "patterns": ["My face is always red and flushed, especially on my cheeks and nose", "I have small, red bumps on my face that look like acne", "My skin feels sensitive and stings"],
+      "responses": ["Persistent facial redness and flushing are key signs of Rosacea. A dermatologist can help you manage this skin condition and identify triggers.", "These symptoms are consistent with Rosacea. A doctor can recommend treatments to reduce redness."]
+    },
+    {
+      "tag": "Sciatica",
+      "patterns": ["I have a shooting pain that travels from my lower back down my leg", "There's a burning or tingling sensation down my leg", "Pain that radiates along the sciatic nerve"],
+      "responses": ["Pain that radiates from the lower back down the leg is often Sciatica. A doctor or physical therapist can provide a diagnosis and treatment plan.", "This sounds like Sciatica. A healthcare provider can help you with exercises and pain management."]
+    },
+    {
+      "tag": "Shingles",
+      "patterns": ["I have a painful, blistering rash on one side of my body", "The skin is very sensitive and burns before the rash appears", "A stripe of blisters that wraps around my torso"],
+      "responses": ["A painful, blistering rash that appears in a stripe on one side of the body is a classic sign of Shingles. It is important to see a doctor immediately for antiviral medication.", "These symptoms are highly indicative of Shingles. Prompt medical treatment is crucial."]
+    },
+    {
+      "tag": "Sinus_Infection",
+      "patterns": ["I have pressure and pain around my eyes and nose", "My face feels tender to the touch", "I have a thick, yellow or green nasal discharge", "Headache and a stuffy nose", "I can't smell anything and my head hurts"],
+      "responses": ["Pain and pressure in the face along with thick colored nasal discharge are common signs of a Sinus Infection (Sinusitis). A doctor can determine if you need antibiotics.", "These symptoms suggest Sinusitis. It would be best to see a healthcare provider for an evaluation."]
+    },
+    {
+      "tag": "Sleep_Apnea",
+      "patterns": ["My partner says I snore loudly and stop breathing in my sleep", "I wake up choking or gasping for air", "I feel very sleepy during the day despite a full night's sleep"],
+      "responses": ["Loud snoring with pauses in breathing are key signs of Sleep Apnea. It is a serious condition that requires a sleep study and medical management. Please see a doctor.", "These symptoms are very concerning for Sleep Apnea. A healthcare provider can refer you for a sleep study."]
+    },
+    {
+      "tag": "Sprain",
+      "patterns": ["I twisted my ankle and now it's swollen and painful", "I hurt my wrist and it's hard to move", "I have a painful, swollen joint after an injury"],
+      "responses": ["Pain and swelling after twisting a joint is likely a Sprain. You should use the RICE method (Rest, Ice, Compression, Elevation) and see a doctor to rule out a fracture.", "This sounds like a sprain. Rest and ice are important. A medical evaluation is needed for severe pain or inability to bear weight."]
+    },
+    {
+      "tag": "Strep_Throat",
+      "patterns": ["I have a very severe sore throat that came on suddenly", "It hurts to swallow and I have a fever", "My tonsils are red and swollen, sometimes with white patches"],
+      "responses": ["A sudden, severe sore throat with fever and swollen tonsils can be Strep Throat. You need to see a doctor for a strep test, as it requires antibiotics.", "These are classic symptoms of Strep Throat. A healthcare provider must diagnose it so you can get the right treatment."]
+    },
+    {
+      "tag": "Stress",
+      "patterns": ["I feel overwhelmed and under a lot of pressure", "I'm irritable, anxious, and have trouble sleeping", "I have headaches and muscle tension from stress"],
+      "responses": ["Feeling overwhelmed and irritable are common reactions to Stress. It's important to find healthy coping mechanisms. If it's chronic, talking to a therapist can be very beneficial.", "These are signs that you are under a lot of stress. A mental health professional can help you develop strategies to manage it."]
+    },
+    {
+      "tag": "Stroke_Warning",
+      "patterns": ["My face is drooping on one side", "I can't raise one of my arms", "My speech is slurred and I'm confused", "Sudden numbness or weakness in the face, arm, or leg"],
+      "responses": ["Facial drooping, arm weakness, and speech difficulty are major signs of a Stroke. This is a medical emergency. You must call for an ambulance immediately. Time is critical.", "These are signs of a Stroke. Call for emergency medical help right away. Do not delay."]
+    },
+    {
+      "tag": "Stye",
+      "patterns": ["I have a painful, red lump on the edge of my eyelid", "It looks like a small pimple on my eyelid", "My eyelid is swollen and tender"],
+      "responses": ["A red, painful lump on the eyelid is likely a Stye. Applying a warm compress can help it drain. If it's very painful or doesn't improve, see a doctor.", "This sounds like a Stye. Warm compresses are the primary treatment. A healthcare provider can help if it persists."]
+    },
+    {
+      "tag": "Sunburn",
+      "patterns": ["My skin is red, painful, and hot to the touch after being in the sun", "I have a sunburn", "My skin is peeling after being out in the sun"],
+      "responses": ["This sounds like a Sunburn. Cool compresses, aloe vera gel, and moisturizers can soothe the skin. Drink plenty of water. See a doctor for severe, blistering sunburn.", "For a sunburn, it's important to cool the skin and hydrate. Avoid further sun exposure."]
+    },
+    {
+      "tag": "Thyroid_Symptoms_Hyper",
+      "patterns": ["I'm losing weight without trying, my heart is racing, and I feel anxious", "I'm always hot and sweaty", "I have tremors in my hands and trouble sleeping"],
+      "responses": ["Unexplained weight loss, a rapid heartbeat, and anxiety can be signs of an Overactive Thyroid (Hyperthyroidism). A doctor can diagnose this with a blood test.", "These symptoms could indicate Hyperthyroidism. Please see a healthcare provider for an evaluation and blood work."]
+    },
+    {
+      "tag": "Thyroid_Symptoms_Hypo",
+      "patterns": ["I'm gaining weight, I'm always cold, and I feel very fatigued", "My skin is dry, my hair is thinning, and I'm constipated", "I feel sluggish and have no energy"],
+      "responses": ["Fatigue, weight gain, and feeling cold can be symptoms of an Underactive Thyroid (Hypothyroidism). It is important to see a doctor for a blood test.", "These symptoms are consistent with Hypothyroidism. A healthcare provider can diagnose and treat this condition."]
+    },
+    {
+      "tag": "Tinnitus",
+      "patterns": ["I hear a constant ringing in my ears", "There's a buzzing or hissing sound in my ears that no one else hears", "My ears are ringing"],
+      "responses": ["The perception of ringing or buzzing in the ears is called Tinnitus. It should be evaluated by a doctor or an audiologist to investigate the cause.", "This sounds like Tinnitus. An ENT specialist can help determine the underlying reason."]
+    },
+    {
+      "tag": "Tonsillitis",
+      "patterns": ["My tonsils are swollen and I have a sore throat", "I have white or yellow spots on my tonsils", "It's difficult to swallow and my neck glands are swollen"],
+      "responses": ["Swollen tonsils with a sore throat are signs of Tonsillitis. It can be viral or bacterial. You should see a doctor to determine the cause.", "These symptoms suggest Tonsillitis. A healthcare provider can diagnose and treat it appropriately."]
+    },
+    {
+      "tag": "Toothache",
+      "patterns": ["I have a sharp, throbbing pain in my tooth", "My tooth is sensitive to hot and cold", "It hurts to chew on one side of my mouth"],
+      "responses": ["A persistent toothache is a sign that you should see a dentist as soon as possible. It could be a cavity, infection, or other issue.", "Tooth pain requires a dental evaluation. Please make an appointment with your dentist."]
+    },
+    {
+      "tag": "Vertigo",
+      "patterns": ["The room is spinning around me", "I feel a sensation of motion when I'm standing still", "I feel very dizzy and off-balance"],
+      "responses": ["A spinning sensation is known as Vertigo. It can be caused by an inner ear problem. It is important to see a doctor for a diagnosis.", "This sounds like Vertigo. A healthcare provider can perform tests to find the cause and recommend treatment."]
+    },
+    {
+      "tag": "Warts",
+      "patterns": ["I have a small, rough growth on my hand", "There's a grainy bump on my finger", "I have a plantar wart on the bottom of my foot"],
+      "responses": ["Small, rough skin growths are often Warts, caused by a virus. A doctor or dermatologist can treat them if they are bothersome.", "This sounds like a common wart. There are over-the-counter treatments, but a dermatologist can offer more effective options."]
+    },
+    {
+      "tag": "Yeast_Infection",
+      "patterns": ["I have vaginal itching, burning, and a thick, white discharge", "It's red and sore down there", "Itching and cottage cheese-like discharge"],
+      "responses": ["Vaginal itching with a thick, white discharge are classic symptoms of a Yeast Infection. A doctor or gynecologist can confirm the diagnosis and provide treatment.", "These symptoms are highly suggestive of a Yeast Infection. It's best to see a healthcare provider for proper diagnosis."]
     }
   ]
 }
