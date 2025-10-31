@@ -9,3 +9,4 @@ jsonify
 SpeechRecognition
 pyttsx3
 PyAudio
+streamlit
