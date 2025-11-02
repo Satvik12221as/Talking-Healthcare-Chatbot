@@ -166,16 +166,13 @@ if __name__ == '__main__':
                 calling_the_bot(text)
             except sr.UnknownValueError:
                 engine.say(
-                    "Sorry, Either your symptom is unclear to me or it is\
-                    not present in our database. Please Try Again.")
+                    "Sorry, Either your symptom is unclear to me or it is not present in our database. Please Try Again.")
                 engine.runAndWait()
                 print(
-                    "Sorry, Either your symptom is unclear to me or it is\
-                    not present in our database. Please Try Again.")
+                    "Sorry, Either your symptom is unclear to me or it is not present in our database. Please Try Again.")
             finally:
                 engine.say(
-                    "If you want to continue please say True otherwise say\
-                    False.")
+                    "If you want to continue please say True otherwise say , False.")
                 engine.runAndWait()
 
         with mic as ans:
