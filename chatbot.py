@@ -79,7 +79,7 @@ def calling_the_bot(txt):
     res = get_response(predict, intents)
 
     engine.say("Found it. From our Database we found that" + res)
-    # engine.say(res)
+    # engine.say (res)
     engine.runAndWait()
     print("Your Symptom was  : ", text)
     print("Result found in our Database : ", res)
