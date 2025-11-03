@@ -94,7 +94,7 @@ if __name__ == '__main__':
     engine = pyttsx3.init()
     rate = engine.getProperty('rate')
 
-    # Increase the rate of the bot according to need,
+    # Increase the rate of the bot according to need
     # Faster the rate, faster it will speak, vice versa for slower.
 
     engine.setProperty('rate', 175)
