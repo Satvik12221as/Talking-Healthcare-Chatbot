@@ -5,7 +5,7 @@ import numpy as np
 
 import nltk
 # The article used nltk.download('all'), but 'punkt' and 'wordnet' are sufficient.
-# 'all' can take a very long time to download..
+# 'all' can take a very long time to download.
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('punkt_tab')
