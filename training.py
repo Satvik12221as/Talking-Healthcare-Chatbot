@@ -78,5 +78,5 @@ model.save("chatbot_model.h5", hist)
 print("Done!")
 
 
-byregymgitrngjubjutnjbnjnbnrenvjv er vhbutbhbvtnvnr
+byregymgitrngjubjutnjbnjnbnrenvjv 
 ubgtrbgnjrenjnuhguthnjbnjhbngjubteg
