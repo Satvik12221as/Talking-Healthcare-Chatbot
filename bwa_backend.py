@@ -120,7 +120,7 @@ llm = ChatOpenAI(model="gpt-4.1-mini")
 # -----------------------------
 ROUTER_SYSTEM = """You are a routing module for a technical blog planner.
 
-Decide whether web research is needed BEFORE planning.
+Decide whether web research is needed BEFORE planning
 
 Modes:
 - closed_book (needs_research=false): evergreen concepts.
