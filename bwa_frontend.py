@@ -188,22 +188,39 @@ def extract_title_from_md(md: str, fallback: str) -> str:
 # -----------------------------
 # Streamlit UI
 # -----------------------------
-st.set_page_config(page_title="LangGraph Blog Writer", layout="wide")
+st.set_page_config(
+    page_title="AI Blog Writing Agent",
+    page_icon="🤖",
+    layout="wide"
+)
 
-st.title("Blog Writing Agent")
+st.markdown(
+"""
+# 🤖 AI Blog Writing Agent
+
+Generate **fully structured blogs with research, sections, and AI-generated images**.
+
+This system uses a **multi-agent pipeline**:
+
+Router → Research → Planner → Writers → Reducer → Image Generator
+"""
+)
+
+st.divider()
 
 with st.sidebar:
-    st.header("Generate New Blog")
+    st.header("Create Blog")
     topic = st.text_area(
-        "Topic",
+        "Blog Topic",
         height=120,
+        placeholder="E.g. The future of AI in healthcare"
     )
     as_of = st.date_input("As-of date", value=date.today())
     run_btn = st.button("🚀 Generate Blog", type="primary")
 
     # ✅ NEW: Past blogs list (keeps everything else intact)
     st.divider()
-    st.subheader("Past blogs")
+    st.subheader("Pipeline")
 
     past_files = list_past_blogs()
     if not past_files:
@@ -257,7 +274,13 @@ if "last_out" not in st.session_state:
 
 # Layout
 tab_plan, tab_evidence, tab_preview, tab_images, tab_logs = st.tabs(
-    ["🧩 Plan", "🔎 Evidence", "📝 Markdown Preview", "🖼️ Images", "🧾 Logs"]
+    [
+        "🧠 Blog Plan",
+        "🔎 Research Sources",
+        "📝 Blog Preview",
+        "🖼️ Generated Images",
+        "🧾 System Logs"
+    ]
 )
 
 logs: List[str] = []
@@ -391,7 +414,7 @@ if out:
 
     # --- Preview tab ---
     with tab_preview:
-        st.subheader("Markdown Preview")
+        st.subheader("Blog Preview")
         final_md = out.get("final") or ""
         if not final_md:
             st.warning("No final markdown found.")
@@ -425,7 +448,7 @@ if out:
 
     # --- Images tab ---
     with tab_images:
-        st.subheader("Images")
+        st.subheader("Generated Images")
         specs = out.get("image_specs") or []
         images_dir = Path("images")
 
@@ -464,3 +487,17 @@ if out:
         st.text_area("Event log", value="\n\n".join(st.session_state["logs"][-80:]), height=520)
 else:
     st.info("Enter a topic and click **Generate Blog**.")
+
+
+st.divider()
+
+st.markdown(
+"""
+<center>
+
+Built with **LangGraph • Groq • Tavily • Gemini • Streamlit**
+
+</center>
+""",
+unsafe_allow_html=True,
+)
