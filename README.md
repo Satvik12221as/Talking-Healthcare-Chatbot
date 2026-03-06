@@ -165,8 +165,7 @@ Workers run **in parallel** using LangGraph fan-out.
 Clone the repository:
 
 ```
-git clone https://github.com/yourusername/blog-writing-agent.git
-cd blog-writing-agent
+git clone https://github.com/yourusername/Blog-Writing-AI-Agent.git
 ```
 
 Create virtual environment:
