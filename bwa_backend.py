@@ -540,7 +540,7 @@ def worker_node(payload: dict) -> dict:
 
 # ============================================================
 # 8) ReducerWithImages (subgraph)
-#    merge_content -> decide_images -> generate_and_place_images.
+#    merge_content -> decide_images -> generate_and_place_images
 # ============================================================
 def merge_content(state: State) -> dict:
     plan = state["plan"]
