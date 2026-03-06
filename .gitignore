@@ -46,7 +46,6 @@ Thumbs.db
 # Generated Blog Output
 # ===============================
 images/
-*.md
 *_bundle.zip
 images.zip
 
