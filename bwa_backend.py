@@ -185,7 +185,7 @@ def router_node(state: State) -> dict:
             max_results_per_query=5
         )
 
-    # Recency logic
+    # Recency logic.
     if decision.mode == "open_book":
         recency_days = 7
     elif decision.mode == "hybrid":
